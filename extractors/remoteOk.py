@@ -28,9 +28,9 @@ def extract_remoteOk_jobs(keyword):
                             location = location_pay[0]
                             job_data = {
                                 "link": f"https://remoteok.com/{link}",
-                                "title": position.string,
-                                "company": company.string,
-                                "location": location.string,
+                                "company": company.string.replace(",", " "),
+                                "location": location.string.replace(",", " "),
+                                "title": position.string.replace(",", " ")
                             }
                             results.append(job_data)
     return results
