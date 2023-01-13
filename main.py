@@ -9,7 +9,3 @@ wwr = extract_wwr_jobs(keyword)
 remote_ok = extract_remoteOk_jobs(keyword)
 
 jobs = indeed+wwr+remote_ok
-
-for job in jobs:
-    print(job)
-    print("/////\n/////")

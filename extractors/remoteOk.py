@@ -26,13 +26,11 @@ def extract_remoteOk_jobs(keyword):
                             company = job_described.find("h3")
                             location_pay = job_described.find_all("div")
                             location = location_pay[0]
-                            pay = location_pay[1]
                             job_data = {
                                 "link": f"https://remoteok.com/{link}",
-                                "position": position.string,
+                                "title": position.string,
                                 "company": company.string,
                                 "location": location.string,
-                                "pay": pay.string
                             }
                             results.append(job_data)
     return results
